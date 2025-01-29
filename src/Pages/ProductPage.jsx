@@ -12,7 +12,7 @@ const ProductPage = () => {
     const fetchProducts = async () =>{
       try {
           const response = await fetch(
-            "https://6795f937bedc5d43a6c3e9f3.mockapi.io/product"
+            "https://6795f912bedc5d43a6c3e93c.mockapi.io/Product"
           );
           const data = await response.json();
           setProducts(data);
@@ -26,7 +26,7 @@ const ProductPage = () => {
   const addProduct = async (product)=> {
     try {
       const response = await fetch(
-        `https://6795f937bedc5d43a6c3e9f3.mockapi.io/product/${pro_id}`,
+        `https://6795f912bedc5d43a6c3e93c.mockapi.io/Product/${pro_id}`,
         {
           method: "POST",
           headers: {
@@ -48,7 +48,7 @@ const ProductPage = () => {
     try {
       const { pro_id } = products[id];
       const response = await fetch(
-        `https://6795f937bedc5d43a6c3e9f3.mockapi.io/product/${pro_id}`,
+        `https://6795f912bedc5d43a6c3e93c.mockapi.io/Product/${pro_id}`,
         {
           method: "PUT",
           headers: {
@@ -71,7 +71,7 @@ const ProductPage = () => {
     try {
       const { pro_id } = products[id];
       await fetch(
-        `https://6795f937bedc5d43a6c3e9f3.mockapi.io/product/${pro_id}`,
+        `https://6795f912bedc5d43a6c3e93c.mockapi.io/Product/${pro_id}`,
         {
           method: "DELETE",
         }
